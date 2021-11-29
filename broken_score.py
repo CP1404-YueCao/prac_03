@@ -1,13 +1,20 @@
 def main():
-    """Get scores and determine grades"""
+    """Get scores and display grades"""
     score = float(input("Enter score: "))
-    grade = determine_grade(score)
+    grade = determine_grades(score)
+    print(f"Your score is {grade}.")
 
+
+def determine_grades(score):
+    """Determine grades"""
     if 90 <= score <= 100:
-        print("Your score is excellent.")
+        return "excellent"
     elif 50 <= score < 90:
-        print("Your score is pass.")
+        return "pass"
     elif 0 <= score < 50:
-        print("Your score is bad.")
+        return "bad"
     else:
-        print("Invalid score")
+        return "invalid score"
+
+
+main()
