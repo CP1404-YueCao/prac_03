@@ -3,6 +3,8 @@ def main():
     score = float(input("Enter score: "))
     grade = determine_grades(score)
     print(f"Your score is {grade}.")
+    for i in range(0, 101):
+        print(determine_grades(i))
 
 
 def determine_grades(score):
